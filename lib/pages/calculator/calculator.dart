@@ -1,3 +1,6 @@
+import 'package:calculadora/pages/calculator/components/keyboard.dart';
+
+import './components/display.dart';
 import 'package:flutter/material.dart';
 
 class Calculator extends StatefulWidget {
@@ -10,12 +13,16 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: bodyPage(),
+      backgroundColor: Colors.white,
     );
   }
 
-  Widget bodyPage(){
-    return Center(
-      child: Text('Center'),
+  Widget bodyPage() {
+    return Column(
+      children: [
+        Display('123'),
+        KeyBoard(),
+      ],
     );
   }
 }
