@@ -14,7 +14,7 @@ class KeyBoard extends StatelessWidget {
         child: Column(
           children: [
             ButtonRow([
-              Button.grey(text: 'AC', flex: 2, cb: cb),
+              Button.grey(text: 'CE', flex: 2, cb: cb),
               Button.grey(text: '%', cb: cb),
               Button.grey(text: '÷', cb: cb),
             ]),
@@ -50,7 +50,7 @@ class KeyBoard extends StatelessWidget {
             ),
             ButtonRow([
               Button(text: '0', flex: 2, cb: cb),
-              Button(text: ',', cb: cb),
+              Button(text: '.', cb: cb),
               Button.blue(text: '=', cb: cb),
             ]),
           ],

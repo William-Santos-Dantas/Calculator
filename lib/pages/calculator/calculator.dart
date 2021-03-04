@@ -14,13 +14,10 @@ class _CalculatorState extends State<Calculator> {
 
   _onPressed(String value) {
     setState(() {
-      if (value == "AC") {
-        memory.allClear();
-      } else {
-        memory.command(value);
-      }
+      memory.command(value);
     });
   }
+
   var height;
 
   @override
@@ -35,7 +32,7 @@ class _CalculatorState extends State<Calculator> {
   Widget bodyPage() {
     return Column(
       children: [
-        Display(memory.value, height * 0.3),
+        Display(memory.value, memory.operation, height * 0.3),
         KeyBoard(_onPressed, height * 0.7),
       ],
     );
